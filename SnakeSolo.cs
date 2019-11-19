@@ -103,18 +103,20 @@ namespace Snake_gui
                     }
                     canvas.FillRectangle(color, new Rectangle(Snake[i].X * SettingsSolo.Width, Snake[i].Y * SettingsSolo.Height, SettingsSolo.Width, SettingsSolo.Height));
                     canvas.FillEllipse(Brushes.Red, new Rectangle(food.X * SettingsSolo.Width, food.Y * SettingsSolo.Height, SettingsSolo.Width, SettingsSolo.Height));
-
                 }
             }
-            
+            else 
+            {
+                SettingsSolo.GameOver = true;
+            }
         }
         private void Moves() 
         {
             for (int i = Snake.Count-1; i >= 0; i--) 
             {
-                if (i == 0)
+                if (i == 0) 
                 {
-                    switch (SettingsSolo.direction)
+                    switch (SettingsSolo.direction) 
                     {
                         case Directions.Up:
                             Snake[i].Y--;
@@ -138,16 +140,10 @@ namespace Snake_gui
             }
         }
 
-        private void SnakeSolo_Load(object sender, EventArgs e)
-        {
-
-        }
-
         private void SnakeSolo_KeyDown(object sender, KeyEventArgs e)
         {
             Input.ChangeState(e.KeyCode, true);
         }
-
         private void SnakeSolo_KeyUp(object sender, KeyEventArgs e)
         {
             Input.ChangeState(e.KeyCode, false);

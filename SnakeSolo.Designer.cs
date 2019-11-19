@@ -33,19 +33,17 @@
             this.label1 = new System.Windows.Forms.Label();
             this.ScoreText = new System.Windows.Forms.Label();
             this.GameTimer = new System.Windows.Forms.Timer(this.components);
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.PbCanvas)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // PbCanvas
             // 
             this.PbCanvas.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
             this.PbCanvas.Location = new System.Drawing.Point(12, 67);
-            this.PbCanvas.MaximumSize = new System.Drawing.Size(1168, 688);
-            this.PbCanvas.MinimumSize = new System.Drawing.Size(1168, 688);
+            this.PbCanvas.MaximumSize = new System.Drawing.Size(1160, 682);
+            this.PbCanvas.MinimumSize = new System.Drawing.Size(1160, 682);
             this.PbCanvas.Name = "PbCanvas";
-            this.PbCanvas.Size = new System.Drawing.Size(1168, 688);
+            this.PbCanvas.Size = new System.Drawing.Size(1160, 682);
             this.PbCanvas.TabIndex = 0;
             this.PbCanvas.TabStop = false;
             this.PbCanvas.Paint += new System.Windows.Forms.PaintEventHandler(this.PbCanvas_Paint);
@@ -74,18 +72,6 @@
             // 
             this.GameTimer.Tick += new System.EventHandler(this.UpdateScreen);
             // 
-            // pictureBox1
-            // 
-            this.pictureBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
-            this.pictureBox1.Location = new System.Drawing.Point(4, 67);
-            this.pictureBox1.MaximumSize = new System.Drawing.Size(1168, 688);
-            this.pictureBox1.MinimumSize = new System.Drawing.Size(1168, 688);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(1168, 688);
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
-            this.pictureBox1.Paint += new System.Windows.Forms.PaintEventHandler(this.PbCanvas_Paint);
-            // 
             // SnakeSolo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -93,7 +79,6 @@
             this.ClientSize = new System.Drawing.Size(1184, 761);
             this.Controls.Add(this.ScoreText);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.PbCanvas);
             this.MaximizeBox = false;
             this.MaximumSize = new System.Drawing.Size(1200, 800);
@@ -101,11 +86,9 @@
             this.Name = "SnakeSolo";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "SnakeSolo";
-            this.Load += new System.EventHandler(this.SnakeSolo_Load);
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.SnakeSolo_KeyDown);
             this.KeyUp += new System.Windows.Forms.KeyEventHandler(this.SnakeSolo_KeyUp);
             ((System.ComponentModel.ISupportInitialize)(this.PbCanvas)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -117,6 +100,5 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label ScoreText;
         private System.Windows.Forms.Timer GameTimer;
-        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }
