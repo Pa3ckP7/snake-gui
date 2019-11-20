@@ -129,7 +129,7 @@ namespace Snake_gui
                     else
                     {
                         color = Brushes.Lime;
-                        color = Brushes.MediumPurple;
+                        
                     }
                     canvas.FillRectangle(color, new Rectangle(Snake[i].X * SettingsSolo.Width, Snake[i].Y * SettingsSolo.Height, SettingsSolo.Width, SettingsSolo.Height));
                     canvas.FillEllipse(Brushes.Red, new Rectangle(food.X * SettingsSolo.Width, food.Y * SettingsSolo.Height, SettingsSolo.Width, SettingsSolo.Height));
