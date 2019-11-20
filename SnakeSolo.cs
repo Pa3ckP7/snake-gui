@@ -67,7 +67,7 @@ namespace Snake_gui
                         Snake.Add(segment);
                         GenerateFood();
                     }
-                    if (Snake[0].X > PbCanvas.Size.Width / SettingsSolo.Width || Snake[0].X < 0 || Snake[0].Y < 0 || Snake[0].Y > PbCanvas.Size.Height / SettingsSolo.Height)
+                    if (Snake[0].X >= PbCanvas.Size.Width / SettingsSolo.Width || Snake[0].X < 0 || Snake[0].Y < 0 || Snake[0].Y >= PbCanvas.Size.Height / SettingsSolo.Height)
                     {
                         SettingsSolo.GameOver = true;
                     }
