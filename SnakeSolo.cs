@@ -13,11 +13,15 @@ namespace Snake_gui
     public partial class SnakeSolo : Form
     {
         static List<Circle> Snake = new List<Circle>();
+        static Keys LastKey;
         static Circle food = new Circle();
         static Random rng = new Random();
-        public SnakeSolo()
+        Form1 f1;
+        static bool CodedExit = false;
+        public SnakeSolo(Form1 f1)
         {
             InitializeComponent();
+            this.f1 = f1;
             new SettingsSolo();
             GameTimer.Interval = 1000 / SettingsSolo.Speed;
             GameTimer.Start();
@@ -29,7 +33,10 @@ namespace Snake_gui
         {
             if (SettingsSolo.GameOver)
             {
-                //game over form
+                GameOverSolo gos = new GameOverSolo(f1,SettingsSolo.Score);
+                gos.Show();
+                CodedExit = true;
+                Close();
             }
             else 
             {
@@ -50,17 +57,38 @@ namespace Snake_gui
                     SettingsSolo.direction = Directions.Right;
                 }
                 Moves();
-                /*if(SettingsSolo.direction != Directions.None) 
+                if (SettingsSolo.direction != Directions.None)
                 {
-                    if (Snake[0].X == food.X && Snake[0].Y == food.Y) 
+                    if (Snake[0].X == food.X && Snake[0].Y == food.Y)
                     {
                         SettingsSolo.Score++;
                         ScoreText.Text = SettingsSolo.Score.ToString();
-                        Circle segment = new Circle(Snake[Snake.Count-1].X, Snake[Snake.Count-1].Y);
+                        Circle segment = new Circle(Snake[Snake.Count - 1].X, Snake[Snake.Count - 1].Y);
                         Snake.Add(segment);
                         GenerateFood();
                     }
-                }*/
+                    if (Snake[0].X > PbCanvas.Size.Width / SettingsSolo.Width || Snake[0].X < 0 || Snake[0].Y < 0 || Snake[0].Y > PbCanvas.Size.Height / SettingsSolo.Height)
+                    {
+                        SettingsSolo.GameOver = true;
+                    }
+                    for (int i = 1; i < Snake.Count; i++) 
+                    {
+                        if (Snake[0].X == Snake[i].X && Snake[0].Y == Snake[i].Y) 
+                        {
+                            SettingsSolo.GameOver = true;
+                        }
+                    }
+                }
+                if (SettingsSolo.GameOver == true) 
+                {
+                    DateTime time1 = DateTime.Now;
+                    DateTime time2 = DateTime.Now;
+                    while (time2.Subtract(time1).TotalSeconds < 3) 
+                    {
+                        time2 = DateTime.Now;
+                        continue;
+                    }
+                }
                 
             }
             PbCanvas.Invalidate();
@@ -143,10 +171,22 @@ namespace Snake_gui
         private void SnakeSolo_KeyDown(object sender, KeyEventArgs e)
         {
             Input.ChangeState(e.KeyCode, true);
+            LastKey = e.KeyCode;
         }
         private void SnakeSolo_KeyUp(object sender, KeyEventArgs e)
         {
             Input.ChangeState(e.KeyCode, false);
+        }
+
+        private void SnakeSolo_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            if (CodedExit == false) 
+            {
+                f1.Show();
+                
+            }
+            CodedExit = false;
+            Input.ChangeState(LastKey, false);
         }
     }
 }

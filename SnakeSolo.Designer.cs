@@ -39,11 +39,11 @@
             // PbCanvas
             // 
             this.PbCanvas.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
-            this.PbCanvas.Location = new System.Drawing.Point(12, 67);
-            this.PbCanvas.MaximumSize = new System.Drawing.Size(1160, 682);
-            this.PbCanvas.MinimumSize = new System.Drawing.Size(1160, 682);
+            this.PbCanvas.Location = new System.Drawing.Point(10, 65);
+            this.PbCanvas.MaximumSize = new System.Drawing.Size(1168, 688);
+            this.PbCanvas.MinimumSize = new System.Drawing.Size(1168, 688);
             this.PbCanvas.Name = "PbCanvas";
-            this.PbCanvas.Size = new System.Drawing.Size(1160, 682);
+            this.PbCanvas.Size = new System.Drawing.Size(1168, 688);
             this.PbCanvas.TabIndex = 0;
             this.PbCanvas.TabStop = false;
             this.PbCanvas.Paint += new System.Windows.Forms.PaintEventHandler(this.PbCanvas_Paint);
@@ -86,6 +86,7 @@
             this.Name = "SnakeSolo";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "SnakeSolo";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.SnakeSolo_FormClosed);
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.SnakeSolo_KeyDown);
             this.KeyUp += new System.Windows.Forms.KeyEventHandler(this.SnakeSolo_KeyUp);
             ((System.ComponentModel.ISupportInitialize)(this.PbCanvas)).EndInit();

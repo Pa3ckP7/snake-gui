@@ -24,8 +24,9 @@ namespace Snake_gui
 
         private void SoloButton_Click(object sender, EventArgs e)
         {
-            SnakeSolo ss = new SnakeSolo();
+            SnakeSolo ss = new SnakeSolo(this);
             ss.Show();
+            Hide();
         }
 
         private void Player2Button_Click(object sender, EventArgs e)
