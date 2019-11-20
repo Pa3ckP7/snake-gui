@@ -31,6 +31,7 @@ namespace Snake_gui
             StartingLength = 5;
             GameOver = false;
             direction = Directions.None;
+            Score = 0;
         }
     }
 }
