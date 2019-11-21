@@ -31,7 +31,9 @@ namespace Snake_gui
 
         private void Player2Button_Click(object sender, EventArgs e)
         {
-            
+            Snake2p sm = new Snake2p(this);
+            sm.Show();
+            Hide();
         }
     }
 }

@@ -97,7 +97,7 @@ namespace Snake_gui
         {
             new SettingsSolo();
             Snake.Clear();
-            Circle head = new Circle(PbCanvas.Size.Width/32,PbCanvas.Size.Height/32);
+            Circle head = new Circle(PbCanvas.Size.Width / 32, PbCanvas.Size.Height/32); 
             Snake.Add(head);
             for (int i = 0; i < SettingsSolo.StartingLength;i++) 
             {
