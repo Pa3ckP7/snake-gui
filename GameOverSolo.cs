@@ -19,6 +19,7 @@ namespace Snake_gui
             InitializeComponent();
             ScoreText.Text = Score.ToString();
             this.f1 = f1;
+            this.BackgroundImage = Image.FromFile("assets/menu/soloend.png");
         }
 
         private void QuitButton_Click(object sender, EventArgs e)

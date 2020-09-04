@@ -39,6 +39,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Times New Roman", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.label1.Location = new System.Drawing.Point(35, 48);
             this.label1.Name = "label1";
@@ -49,6 +50,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
+            this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.label2.Location = new System.Drawing.Point(60, 117);
             this.label2.Name = "label2";
@@ -59,6 +61,7 @@
             // ScoreText
             // 
             this.ScoreText.AutoSize = true;
+            this.ScoreText.BackColor = System.Drawing.Color.Transparent;
             this.ScoreText.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.ScoreText.Location = new System.Drawing.Point(165, 112);
             this.ScoreText.Name = "ScoreText";

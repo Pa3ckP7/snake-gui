@@ -74,6 +74,7 @@
             // Score1Text
             // 
             this.Score1Text.AutoSize = true;
+            this.Score1Text.BackColor = System.Drawing.Color.Transparent;
             this.Score1Text.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.Score1Text.Location = new System.Drawing.Point(196, 120);
             this.Score1Text.Name = "Score1Text";
@@ -84,6 +85,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
+            this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.label2.Location = new System.Drawing.Point(30, 125);
             this.label2.Name = "label2";
@@ -95,6 +97,7 @@
             // 
             this.MatchResultText.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.MatchResultText.AutoSize = true;
+            this.MatchResultText.BackColor = System.Drawing.Color.Transparent;
             this.MatchResultText.Font = new System.Drawing.Font("Times New Roman", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.MatchResultText.Location = new System.Drawing.Point(24, 45);
             this.MatchResultText.Name = "MatchResultText";
@@ -105,6 +108,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.label1.Location = new System.Drawing.Point(30, 153);
             this.label1.Name = "label1";
@@ -115,6 +119,7 @@
             // Score2Text
             // 
             this.Score2Text.AutoSize = true;
+            this.Score2Text.BackColor = System.Drawing.Color.Transparent;
             this.Score2Text.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.Score2Text.Location = new System.Drawing.Point(196, 147);
             this.Score2Text.Name = "Score2Text";

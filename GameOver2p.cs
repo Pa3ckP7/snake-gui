@@ -48,12 +48,15 @@ namespace Snake_gui
             {
                 case Match_Result.P1Wins:
                     MatchResultText.Text = "Player1 Wins";
+                    this.BackgroundImage = Image.FromFile("assets/menu/p1win.png");
                     break;
                 case Match_Result.P2Wins:
                     MatchResultText.Text = "Player2 Wins";
+                    this.BackgroundImage = Image.FromFile("assets/menu/p2win.png");
                     break;
                 case Match_Result.Draw:
                     MatchResultText.Text = "It's a Draw";
+                    this.BackgroundImage = Image.FromFile("assets/menu/draw.png");
                     break;
             }
         }
