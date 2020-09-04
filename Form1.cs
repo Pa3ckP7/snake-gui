@@ -15,6 +15,7 @@ namespace Snake_gui
         public Form1()
         {
             InitializeComponent();
+            this.BackgroundImage = Image.FromFile("assets/menu/main.png");
         }
 
         private void QuitButton_Click(object sender, EventArgs e)

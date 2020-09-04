@@ -143,6 +143,7 @@ namespace Snake_gui
                 {
                     Settings2p.direction = Directions.Right;
                 }
+
                 if (Input.KeyPressed(Keys.W) && Settings2p.direction2 != Directions.Down)
                 {
                     Settings2p.direction2 = Directions.Up;

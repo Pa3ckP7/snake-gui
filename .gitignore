@@ -1,3 +1,5 @@
 /.vs/
-/bin/
 /obj/
+/bin/Debug/Snake-gui.exe
+/bin/Debug/Snake-gui.exe.config
+/bin/Debug/Snake-gui.pdb
